@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    tools:context=".SucessoActivity">
+
+    <!-- Container centralizado contendo o fluxo de sucesso -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_outer_xlarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Ilustração de Sucesso -->
+        <ImageView
+            android:id="@+id/iv_sucesso_ilustracao"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:contentDescription="@string/success_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_success" />
+
+        <!-- Título Informativo -->
+        <TextView
+            android:id="@+id/tv_sucesso_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_outer_large"
+            android:text="@string/success_title"
+            android:textColor="@color/success_text"
+            android:textSize="@dimen/text_size_title_large"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_sucesso_ilustracao" />
+
+        <!-- Mensagem Informativa -->
+        <TextView
+            android:id="@+id/tv_sucesso_mensagem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_outer_small"
+            android:gravity="center"
+            android:text="@string/success_message"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sucesso_titulo" />
+
+        <!-- Área de Alto Contraste para Exibição da Senha -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_senha_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_outer_large"
+            app:cardBackgroundColor="@color/success_bg"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sucesso_mensagem"
+            app:layout_constraintWidth_max="400dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+                <TextView
+                    android:id="@+id/tv_sucesso_senha_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/success_queue_label"
+                    android:textColor="@color/success_text"
+                    android:textSize="@dimen/text_size_body"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_sucesso_senha_numero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_outer_small"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="@dimen/text_size_senha"
+                    android:textStyle="bold"
+                    tools:text="@string/success_ticket_number" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Botão Novo Pedido -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_novo_pedido"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="@dimen/margin_outer_large"
+            android:backgroundTint="@color/primary"
+            android:text="@string/btn_new_order"
+            android:textAllCaps="false"
+            android:textColor="@color/text_on_primary"
+            android:textSize="@dimen/text_size_body_large"
+            android:textStyle="bold"
+            app:cornerRadius="@dimen/button_corner_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_senha_container"
+            app:layout_constraintWidth_max="400dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
