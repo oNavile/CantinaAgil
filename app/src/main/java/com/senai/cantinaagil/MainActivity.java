@@ -5,6 +5,8 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +28,15 @@ public class MainActivity extends AppCompatActivity {
         fabCarrinho.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, CarrinhoActivity.class);
             startActivity(intent);
+        });
+
+        MaterialButton btnGerenciar = findViewById(R.id.btn_gerenciar_produtos);
+        btnGerenciar.setOnClickListener(v -> {
+
+            Intent intent = new Intent(MainActivity.this, new GerenciarProdutosActivity.class);
+
+            startActivity(intent);
+
         });
     }
 }
